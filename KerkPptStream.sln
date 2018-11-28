@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KerkPptStream", "KerkPptStream\KerkPptStream.csproj", "{111E713E-A813-4752-943B-5D0A011999AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamServer", "StreamServer\StreamServer.csproj", "{62452451-68FF-435D-87FE-87150399EB4E}"
+EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -15,15 +21,15 @@ Global
 		{111E713E-A813-4752-943B-5D0A011999AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{111E713E-A813-4752-943B-5D0A011999AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{111E713E-A813-4752-943B-5D0A011999AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62452451-68FF-435D-87FE-87150399EB4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62452451-68FF-435D-87FE-87150399EB4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62452451-68FF-435D-87FE-87150399EB4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62452451-68FF-435D-87FE-87150399EB4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E608910-1592-4A06-A5BA-AFB339BC8BD6}
-	EndGlobalSection
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
