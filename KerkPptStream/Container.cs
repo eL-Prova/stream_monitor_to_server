@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using ImageToStream;
 using KerkPptStream.Stream;
@@ -95,13 +96,19 @@ namespace KerkPptStream
             _nwStream = _client.GetStream();
             //byte[] bytesToSend = ASCIIEncoding.ASCII.GetBytes(textToSend);
 
+            DateTime lastRun = DateTime.MinValue;
             while (_snapshotManager.StreamEnabled)
             {
-                var imageIn = _snapshotManager.CreateSnapshot();
-                var bytesToSend = imageIn.imageToByteArray();
+                if (lastRun == DateTime.MinValue || lastRun < DateTime.Now.AddSeconds(10))
+                {
+                    using (var imageIn = _snapshotManager.CreateSnapshot())
+                    {
+                        var bytesToSend = imageIn.imageToByteArray();
 
-                _nwStream.Write(bytesToSend, 0, bytesToSend.Length);
-                imageIn.Dispose();
+                        _nwStream.Write(bytesToSend, 0, bytesToSend.Length);
+                    }
+                    lastRun = DateTime.Now;
+                }
             }
             //---send the text---
             //Console.WriteLine("Sending : " + textToSend);
