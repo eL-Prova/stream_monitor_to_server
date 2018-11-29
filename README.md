@@ -1,1 +1,1 @@
-# stream_monitor_to_server
+# Streaming a monitor or region to a streamserver which can be accessed from the internet.
